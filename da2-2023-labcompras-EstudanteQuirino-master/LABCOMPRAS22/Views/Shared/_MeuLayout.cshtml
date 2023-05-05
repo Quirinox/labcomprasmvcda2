@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "_MeuLayout";
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Latest compiled and minified CSS -->
+    
+ 
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width">
+    <title>@ViewBag.TituloPagina</title>
+    </head>
+    <body>
+         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">Index</a>
+            <a class="navbar-brand" asp-controller="Home" asp-action="Conceito">Conceito</a>
+            <a class="navbar-brand" asp-controller="Despesas" asp-action="Index">Despesas</a>
+            <a class="navbar-brand" asp-controller="Contas" asp-action="Index">Conta</a>
+        </div>
+    </nav>
+           
+
+        @RenderBody()
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+

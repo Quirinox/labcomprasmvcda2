@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Conta;
+@{
+    ViewBag.TituloPagina("NovaConta");
+}
+
+<form asp-action="NovaConta" method="post" class="w-50">
+    <div>
+    <label asp-for="NomeTitular" class="mb-3">Nome</label>
+    <input asp-for="NomeTitular" class="form-control" type="Text"/>
+    </div>
+    <select asp-for="Saldo">
+        <option> </option>
+    </select>
+    <input type="submit" value="NovaConta"></input>
+</form>

@@ -1,0 +1,26 @@
+﻿@model List<Conta>
+@{
+     ViewBag.TituloPagina = "Conta";
+
+
+}
+@if (Model.Count==0)
+{
+    <strong>Sem Contas...</strong>
+}
+else 
+{
+@foreach (Conta p in Model)
+{
+<div>
+<label for="NomeTitular">Nome Titular:</label>@p.NomeTitular
+</div>
+<div>
+<label for="Saldo">Saldo: </label>@p.Saldo
+</div>
+<div>
+<label for="ativa">ativa: </label>@p.ativa
+</div>
+}
+}
+<a asp-action="NovaConta" class="btn btn-primary">Nova Conta</a>

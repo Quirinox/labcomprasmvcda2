@@ -1,0 +1,19 @@
+﻿@model Conta;
+
+
+@{
+    ViewBag.TituloPagina = "ContaConfirmada";
+}
+
+<div>
+<label for="NomeTitular">Nome Titular:</label>@Model.NomeTitular
+</div>
+<div>
+<label for="Saldo">Saldo: </label>@Model.Saldo
+</div>
+<div>
+<label for="ativa">ativa: </label>@Model.ativa
+</div>
+<div> 
+<a asp-action="NovaConta" class="btn btn-primary">Nova Conta</a>
+</div>

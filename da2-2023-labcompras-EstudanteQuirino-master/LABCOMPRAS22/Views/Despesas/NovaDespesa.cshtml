@@ -1,0 +1,40 @@
+﻿@{
+     ViewBag.TituloPagina = "NovaDespesa";
+}
+@model Despesa
+<form asp-action="NovaDespesa" method="post" class="w-50" >
+    <div asp-validation-summary="All"></div>
+    <div class="mb-3">
+        <label asp-for="NomeDespesa" for="NomeDespesa" class="form-label">Nome Da Despesa </label>
+        <input asp-for="NomeDespesa" type="text" id="NomeDespesa" name="NomeDespesa" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Quantidade" for="Quantidade" class="form-label">Quantidade</label>
+        <input asp-for="Quantidade" type="text" id="Quantidade" name="Quantidade" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Valor" for="Valor" class="form-label">Valor</label>
+        <input asp-for="Valor" type="text" id="Valor" name="Valor" value="0" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <select asp-for="Categoria" id="Categoria" name="Categoria">
+            <option value="Alimentar" class=“form-select”>Alimentar</option>
+            <option value="Roupa" class="form-select">Roupa</option>
+            <option value="Transporte" class="form-select">Transporte</option>
+            <option value="Casa" class=“form-select”>Casa</option>
+            <option value="Pessoal" class=“form-select”>Pessoal</option>
+        </select>
+    </div>
+  
+    <div class="mb-3">
+        <select asp-for="Pago" id="Pago" name="Pago">
+            <option value="False" class=“form-select” selected>Não</option>
+            <option value="True"class=“form-select”>Sim</option>
+        </select>
+    </div>
+   <input type="submit" value="Criar Despesa" />
+
+    <!--  <button asp-controller="Despesas" asp-action="novaDespesa">Adicionar Despesa</button>  -->  
+</form>
